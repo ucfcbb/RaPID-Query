@@ -2,6 +2,8 @@
 
 Copyright (c) 2022 S. Zhang lab at University of Central Florida
 
+The tool is free for non-commercial usage. Please use at your own discretion. For commercial use please contact us.
+
 ## Run RaPID-Query Program
 
 RaPID-Query program is compiled using GCC 9.1.0 with -Os optimization flag under a 64-bit Unix based operating system.
