@@ -1,5 +1,9 @@
 # RaPID-Query
+
+Copyright (c) 2022 S. Zhang lab at University of Central Florida
+
 ## Run RaPID-Query Program
+
 RaPID-Query program is compiled using GCC 9.1.0 with -Os optimization flag under a 64-bit Unix based operating system.
 
 RaPID-Query program has below parameters:
