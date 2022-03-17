@@ -1,6 +1,6 @@
 # RaPID-Query
 
-Copyright (c) 2022 S. Zhang lab at University of Central Florida
+Copyright (c) 2022 University of Central Florida and UTHealth
 
 The tool is free for non-commercial usage. Please use at your own discretion. For commercial use please contact us.
 
