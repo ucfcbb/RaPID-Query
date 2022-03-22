@@ -1,5 +1,7 @@
 # RaPID-Query
 
+Author: Yuan Wei (yuan.wei@Knights.ucf.edu)
+
 Copyright (c) 2022 University of Central Florida and University of Texas Health Science Center at Houston
 
 The tool is free for non-commercial usage. Please use at your own discretion. For commercial use please contact us.
