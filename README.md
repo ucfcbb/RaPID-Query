@@ -1,6 +1,6 @@
 # RaPID-Query
 
-Author: Yuan Wei (yuan.wei@ucf.edu)
+Contact Author: Yuan Wei (yuan.wei@ucf.edu)
 
 Copyright (c) 2022 University of Central Florida and University of Texas Health Science Center at Houston
 
