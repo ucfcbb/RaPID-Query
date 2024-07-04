@@ -3,6 +3,7 @@
 //  * Description: Run RaPID query long match with refined original resolution by merging on the fly approach. 
 //  * Author: Yuan Wei 
 //  * Created on: Jun 22, 2021
+//  * Modified on: Jul 04, 2024
 //  * --------------------------------------------------------------------------------------------------------
 
 #include <iostream>
@@ -90,10 +91,10 @@ void report_match(string output_file_path_and_name, string sample_id_query, stri
     int haplotype_id_in_sample_id_other = haplotype_id_index_other % 2; //zero is the first haplotype id and one is the second haplotype id of the sample id
     string sample_id_other = sample_ids[sample_id_index_other];
 
-    //when output IBD matches, excluding the individual id which is the query itself
-    if (sample_id_query == sample_id_other){
-        return;
-    }
+    // //when output IBD matches, excluding the individual id which is the query itself
+    // if (sample_id_query == sample_id_other){
+    //     return;
+    // }
 
     //collect match data
     int start_position_physical = physical_positions[start_site_index];
