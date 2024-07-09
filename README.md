@@ -26,12 +26,12 @@ RaPID-Query program has below parameters:
 
 An example command of running RaPID-Query program:
 ```
-./RaPID-Query_v1.0 -w 13 -r 5 -c 1 -d 7.0 -lm 700 -dh 1.0 -lmh 100 -dg 2.0 -m ./output_ibds.txt -p ./test_panel.vcf -q ./test_query.vcf -g ./test_map.txt 
+./RaPID-Query_v1.1 -w 13 -r 5 -c 1 -d 7.0 -lm 700 -dh 1.0 -lmh 100 -dg 2.0 -m ./output_ibds.txt -p ./test_panel.vcf -q ./test_query.vcf -g ./test_map.txt 
 ```
 
 The command to get the help of the program:
 ```
-./RaPID-Query_v1.0 -h
+./RaPID-Query_v1.1 -h
 ```
 ## Input and Output Files
 Three input files are required to run RaPID-Query program: the panel file in VCF format, the query file in VCF format, and the genetic map file in HapMap format. More than one individuals can be included in the query file. To perform the query against the panel, the values of *CHROM* field and *POS* field in both panel and query VCF files should match. The genetic map file uses the HapMap format, whose description should be found in the first line of the file. The format of each line starting with the second line contains four tab-delimited fields: *Chromosome*, *Position(bp)*, *Rate(cM/Mb)*, and *Map(cM)*. Note that the value of the *Rate(cM/Mb)* field is not used. If the genetic mapping of the physical position in VCF file is not found, interpolation is used to estimate the genetic distance of such position.
