@@ -1,4 +1,5 @@
 # RaPID-Query
+RaPID-Query is a query-based identity by descent (IBD) segment detection tool. It aims to be efficient, scalable, and error-tolerant for identifying IBD segments between a query haplotype and a haplotype panel.
 
 Contact Author: Yuan Wei (yuan.wei@ucf.edu)
 
@@ -7,7 +8,6 @@ Copyright (c) 2022 University of Central Florida and University of Texas Health 
 The tool is free for non-commercial usage. Please use at your own discretion. For commercial use please contact us.
 
 ## Run RaPID-Query Program
-
 RaPID-Query program is compiled using GCC 9.1.0 with -Os optimization flag under a 64-bit Unix based operating system.
 
 RaPID-Query program has below parameters:
@@ -37,3 +37,24 @@ The command to get the help of the program:
 Three input files are required to run RaPID-Query program: the panel file in VCF format, the query file in VCF format, and the genetic map file in HapMap format. More than one individuals can be included in the query file. To perform the query against the panel, the values of *CHROM* field and *POS* field in both panel and query VCF files should match. The genetic map file uses the HapMap format, whose description should be found in the first line of the file. The format of each line starting with the second line contains four tab-delimited fields: *Chromosome*, *Position(bp)*, *Rate(cM/Mb)*, and *Map(cM)*. Note that the value of the *Rate(cM/Mb)* field is not used. If the genetic mapping of the physical position in VCF file is not found, interpolation is used to estimate the genetic distance of such position.
 
 The output file contains the identity by descent (IBD) found by RaPID-Query program in a comma-delimited text format. The first line indicates the format of the file, and the identified IBD segments are listed starting from the second line. The output format contains nine fields: *Query individual id*, *Query individual haplotype id* (0 or 1), *Panel individual id*, *Panel individual haplotype id* (0 or 1), *Physical start position*, *Physical end position*, *Genetic length*, *Site start index* (in VCF file), and *Site end index* (in VCF file).
+
+## Reference
+If you use RaPID-Query in your research, please cite the following article:
+> Yuan Wei, Ardalan Naseri, Degui Zhi, Shaojie Zhang, RaPID-Query for fast identity by descent search and genealogical analysis, Bioinformatics, Volume 39, Issue 6, June 2023, btad312, https://doi.org/10.1093/bioinformatics/btad312.
+```
+@article{10.1093/bioinformatics/btad312,
+    author = {Wei, Yuan and Naseri, Ardalan and Zhi, Degui and Zhang, Shaojie},
+    title = {RaPID-Query for fast identity by descent search and genealogical analysis},
+    journal = {Bioinformatics},
+    volume = {39},
+    number = {6},
+    pages = {btad312},
+    year = {2023},
+    month = {06},
+    abstract = {Due to the rapid growth of the genetic database size, genealogical search, a process of inferring familial relatedness by identifying DNA matches, has become a viable approach to help individuals finding missing family members or law enforcement agencies locating suspects. A fast and accurate method is needed to search an out-of-database individual against millions of individuals. Most existing approaches only offer all-versus-all within panel match. Some prototype algorithms offer one-versus-all query from out-of-panel individual, but they do not tolerate errors.A new method, random projection-based identity-by-descent (IBD) detection (RaPID) query, is introduced to make fast genealogical search possible. RaPID-Query identifies IBD segments between a query haplotype and a panel of haplotypes. By integrating matches over multiple PBWT indexes, RaPID-Query manages to locate IBD segments quickly with a given cutoff length while allowing mismatched sites. A single query against all UK biobank autosomal chromosomes was completed within 2.76 seconds on average, with the minimum length 7 cM and 700 markers. RaPID-Query achieved a 0.016 false negative rate and a 0.012 false positive rate simultaneously on a chromosome 20 sequencing panel having 86 265 sites. This is comparable to the state-of-the-art IBD detection method TPBWT(out-of-sample) and Hap-IBD. The high-quality IBD segments yielded by RaPID-Query were able to distinguish up to fourth degree of the familial relatedness for a given individual pair, and the area under the receiver operating characteristic curve values are at least 97.28\%.The RaPID-Query program is available at https://github.com/ucfcbb/RaPID-Query.},
+    issn = {1367-4811},
+    doi = {10.1093/bioinformatics/btad312},
+    url = {https://doi.org/10.1093/bioinformatics/btad312},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/39/6/btad312/50526020/btad312.pdf},
+}
+```
